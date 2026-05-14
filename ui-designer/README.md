@@ -10,6 +10,44 @@
 
 ---
 
+## 安装
+
+### 方法一：使用 OpenClaw CLI 一键安装（推荐）
+
+```bash
+openclaw skills install https://github.com/Team-Nexus-AI/openclaw-skills/tree/main/ui-designer
+```
+
+### 方法二：手动安装
+
+1. 克隆或下载本仓库：
+
+```bash
+git clone https://github.com/Team-Nexus-AI/openclaw-skills.git
+```
+
+2. 将 `ui-designer` 目录复制到 OpenClaw 的 skills 目录：
+
+```bash
+cp -r openclaw-skills/ui-designer ~/.openclaw/projects/.openclaw/skills/
+# 或者（取决于你的 OpenClaw 安装路径）
+cp -r openclaw-skills/ui-designer /projects/.openclaw/skills/
+```
+
+3. 重启 OpenClaw 或重新开始对话，skill 即生效。
+
+### 验证安装
+
+在 OpenClaw 对话中输入：
+
+```
+帮我设计UI
+```
+
+如果 AI 开始询问 UI 需求，说明安装成功 ✅
+
+---
+
 ## 工作流
 
 ```
@@ -63,6 +101,7 @@ Step 5  将 UI 代码融合到项目中（React / Vue / 原生 HTML 等）
 
 ```
 ui-designer/
+├── README.md                         # 本文档
 ├── SKILL.md                          # 主流程与工作流定义
 └── references/
     ├── stitch-prompt-guide.md        # Google Stitch 高质量 Prompt 构建指南
